@@ -4,7 +4,7 @@ import App from './components/App'
 import Article from './components/Article/Article'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
   [
     { path: "/", element: <App /> },
     { path: "/article/:title", element: <Article /> }
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
   {
     basename: "/konoba-frontend",
   }
-])
+)
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
