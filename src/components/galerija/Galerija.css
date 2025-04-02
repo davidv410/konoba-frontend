@@ -1,0 +1,27 @@
+.gallery-section {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 6vw 0;
+}
+
+.gallery {
+    width: calc(100% - 4vw);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px;
+}
+
+.block {
+   
+    aspect-ratio: 1;
+    background-size: cover;
+    border-radius: 4px;
+}
+
+@media (max-width: 810px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

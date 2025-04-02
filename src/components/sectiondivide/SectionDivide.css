@@ -1,0 +1,36 @@
+.section-divide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-divide-left {
+    width: 200px;
+    height: 1px;
+    background-color: rgb(228, 228, 228);
+}
+
+.section-divide-middle {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgb(228, 228, 228);
+    margin: 0 10px;
+}
+
+.section-divide-right {
+    width: 200px;
+    height: 1px;
+    background-color: rgb(228, 228, 228);
+}
+
+@media (max-width: 550px) {
+    .section-divide-left {
+        width: 40vw;
+    }
+
+    .section-divide-right {
+        width: 40vw;
+    }
+}

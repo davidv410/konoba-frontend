@@ -1,0 +1,82 @@
+.article-wrap {
+    display: flex;
+    width: 550px;
+    height: fit-content;
+    color: white;
+    background-image: url('../../../assets/wood4test.jpg');
+    padding: 1vw;
+    margin: 0 0 20px 10px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.555) 0px 5px 15px;
+    cursor: pointer;
+}
+
+
+.article-img-div {
+    width: 128px;
+    height: 128px;
+    border-radius: 4px;
+    margin: 0 10px 0 0;
+}
+
+.article-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.article-info {
+    width: 70%;
+    height: 85%;
+}
+
+.article-date {
+    font-family: Afacad;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.article-title {
+    font-weight: 400;
+    font-family: Fraunces;
+    font-size: 24px;
+    margin: 5px 0;
+    letter-spacing: 1px;
+    color: white;
+    
+}
+
+.article-content {
+    font-family: Afacad;
+    font-size: 20px;
+}
+
+@media (max-width: 1200px) {
+    .article-wrap{
+        width: calc(95% - 20px);
+        margin-left: 3.4vw;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .article-wrap{
+        width: calc(100% - 6vw);
+        height: 130px;
+    }
+
+    .article-info {
+        width: 90%;
+        padding: 1vw;
+    }
+
+    .article-content {
+        font-family: Afacad;
+        font-size: 3.8vw;
+    }
+
+    .article-img-div {
+        display: none;
+    }
+}

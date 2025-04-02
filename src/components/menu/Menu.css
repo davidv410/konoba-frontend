@@ -1,0 +1,72 @@
+.menu-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vw 0 6vw 0;
+}
+
+/* .menu {
+
+
+} */
+
+
+.menu-sections {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    flex-wrap: wrap;
+    color: white;
+    background-image: url('../../assets/wood4test.jpg');
+    padding: 1vw;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.555) 0px 5px 12px;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.menu-little-title {
+    all: unset;
+    font-family: Fraunces;
+    font-size: 55px;
+    font-weight: 300;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+
+    .menu {
+        width: calc(100% - 4vw);
+
+    }
+
+    .menu-items {
+        width: calc(100% - 2vw);
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        gap: 10px;
+    }
+
+    .menu-little-title {
+        width: calc(100% - 4vw);
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .menu-little-title {
+        font-size: 32px;
+    }
+
+}
+

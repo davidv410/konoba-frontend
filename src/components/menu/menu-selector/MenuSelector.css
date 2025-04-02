@@ -1,0 +1,18 @@
+.menu-section-item {
+    font-family: Afacad;
+    font-size: 24px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.section-active {
+    border-bottom: 1px solid white;
+}
+
+@media (max-width: 700px ) {
+    .menu-section-item {
+        font-size: 20px;
+        margin: 0 10px;
+        white-space: nowrap;
+    }
+}

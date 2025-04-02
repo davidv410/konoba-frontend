@@ -1,0 +1,91 @@
+.menu-item-container {
+    display: flex;
+    width: 550px;
+    background-image: url('../../../assets/wood4test.jpg');
+    color: white;
+    padding: 1vw;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.555) 0px 5px 12px;
+}
+
+.menu-item-img-div {
+    width: 80px;
+    height: 80px;
+}
+
+.menu-item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.menu-item-info-div {
+    width: 80%;
+    margin: 0 0 0 10px;
+}
+
+.menu-item-info-one {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Fraunces;
+}
+
+.menu-item-name {
+    font-family: Fraunces;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 24px;
+    margin: 0;
+    width: fit-content;
+    color: white;
+}
+
+.menu-item-price-div {
+    display: flex;
+}
+
+.menu-item-price-border {
+    height: 20px;
+    width: 8vw;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.menu-item-price {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.menu-item-info-two {
+    font-family: Afacad;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+@media (max-width: 1200px) {
+    .menu-item-container {
+        display: flex;
+        width: 100%;
+        justify-content:space-between
+    }
+
+    .menu-item-info-div {
+        width: 90%;
+    }
+
+    .menu-item-price-border {
+        height: 20px;
+        width: 30vw;
+        border-bottom: 1px solid rgb(211, 211, 211);
+    }
+
+}
+
+@media (max-width: 550px) {
+/* 
+    .menu-item-info-div {
+        width: 70%;
+    } */
+}
