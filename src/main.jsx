@@ -12,7 +12,7 @@ const router = createBrowserRouter(
     { path: "admin-confirm", element: <BookConfirm />}
   ],
   {
-    basename: "/konoba-frontend/",
+    basename: "/konoba-frontend",
   }
 )
 
