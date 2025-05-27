@@ -1,23 +1,29 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './MenuSelector.css'
+import MenuSelectorSg from '../menu-selector-sg/MenuSelectorSg'
+import useFetch from '../../../hooks/useFetch'
 
-const MenuSelector = ({ activeMenu, setActiveMenu, displayThisMenu, setDisplayThisMenu }) => {
+const MenuSelector = ({ showAll }) => {
 
-    const [menuSelector, setmenuSelector] = useState(['Juha', 'Predjela', 'Paste i rizoto', 'Jela s rostilja', 'Deserti'])
+    const { data, error, isLoading } = useFetch("http://localhost:5000/menus")
 
+    const displayedItems = showAll ? data : data?.slice(0, 2)
 
-    const setActiveMenuFunc = (i) => {
-        setActiveMenu(i)
-        setDisplayThisMenu(menuSelector[i])
-    }
+    if (isLoading) {return <div>Loading...</div>; }
+    if (error) {return <div>Error: {error.message}</div>;}
 
     return(
         <>
-            {menuSelector.map((section, i) => (
-                <li key={i} className={`menu-section-item ${ activeMenu === i ? 'section-active' :  null }`} onClick={() => setActiveMenuFunc(i)}>{section}</li>
-            ))}
+        {
+            displayedItems?.map(item => 
+            <div className="menu-titles-div" key={item.id}>
+                <div className="menu-titles">{item.name}</div>
+                <MenuSelectorSg menuID={item.id}/>
+            </div>
+            )
+        }
         </>
     )
 }
 
-export default MenuSelector 
+export default MenuSelector

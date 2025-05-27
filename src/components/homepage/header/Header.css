@@ -43,6 +43,10 @@ header {
     align-items: center;
 }
 
+.header-a-container {
+    height: 100%;
+}
+
 .logo {
     width: auto;
     height: 100%;
@@ -50,7 +54,7 @@ header {
 }
 
 .navigation-container {
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: end;

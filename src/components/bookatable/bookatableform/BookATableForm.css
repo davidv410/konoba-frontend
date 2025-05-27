@@ -55,6 +55,103 @@ label {
     flex-direction: column;
 }
 
+.error-message {
+    color: red;
+}
+
+.success-message-div {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.success-message {
+    color: rgb(0, 197, 0);
+    background-color: white;
+    border: 1px solid rgb(190, 190, 190);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.close-success {
+    color: black;
+    cursor: pointer;
+}
+
+.book-success-msg {
+    font-family: Afacad;
+    font-size: 20px;
+    border-radius: 4px;
+    color: rgb(0, 185, 0);
+    background-color: white;
+    border: 1px solid rgb(219, 219, 219);
+    padding: 2vw;
+    position: fixed;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+.close-success {
+    color: black;
+    margin: 10px;
+}
+
+.checkInfoDiv {
+    font-family: Afacad;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.send-btn {
+    font-family: Afacad;
+    font-size: 12px;
+    padding: 8px 15px;
+    border: 1px solid black;
+    margin: 0 10px 0 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin: 0 0 5px 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.quit-btn {
+    font-family: Afacad;
+    font-size: 12px;
+    padding: 8px 15px;
+    border: 1px solid black;
+    margin: 0 10px 0 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    cursor: pointer;
+    width: 100%;
+     background-color: rgba(0, 0, 0, 0);
+}
+
+.check-info-p {
+    font-family: Fraunces;
+}
+
+.check-info-info {
+    margin: 10px 0;
+}
+
+.info-p {
+     margin: 5px 0;
+}
+
 @media (max-width: 740px) {
     .input{
         width: 250px;

@@ -1,47 +1,53 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
+import useFetch from '../../../hooks/useFetch';
 import './BlogArticle.css'
-import posaoBlog from '../../../assets/posaoblog.jpg'
-import kobasijadaBlog from '../../../assets/kobasijadablog.jpg'
 
 
 const BlogArticle = () => {
     
     const navigate = useNavigate();
 
-    const [blogData, setBlogData] = useState([
-        {image: posaoBlog, date: "MAR 22, 2025", title: "Oglas za posao", desc:`Radno mjesto: KONOBAR (potrebno iskustvo na istim ili sličnim poslovima)`},
-        {image: kobasijadaBlog, date: "MAR 25, 2025", title: "Livanjska kobasijada", desc:`…Tradicija se nastavlja…`}
-    ])
+    const { data, error, isLoading } = useFetch("http://localhost:5000/blog");
+
+     const displayedItems = data?.slice(0, 2)
+
+    if (isLoading) {return <div>Učitava se...</div>; }
+    if (error) {return <div>Error: {error.message}</div>;}
 
     const openArticle = (title) => {
        let titleUpdate = title.replace(/\s+/g, '-')
-       navigate(`/article/${titleUpdate}`)
+       navigate(`/blog/${titleUpdate}`)
+    }
 
-        // ovo ce mi trebat
-        // let str = "hello-world-this-is-JS";
-        // let newStr = str.replace(/-/g, " ");
-        // console.log(newStr);
+    const formatDate = (dateString) => {
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString('en-US', options);
     }
 
     return (
         <>
-            {blogData?.length > 0 ? (
-                blogData.map(item => (
+        <div className='article-wrap-cont'>
+            {data?.length > 0 ? (
+                displayedItems.map(item => (
                     <article key={item.title} className='article-wrap' onClick={() => openArticle(item.title)}>
                         <div className='article-img-div'>
-                            <img src={item.image} alt={item.title} className='article-img'/>
+                            <img src={`./dist/assets/${item.image}`} alt={item.image} className='article-img'/>
                         </div>
                         <div className='article-info'>
-                            <time className='article-date'>{item.date}</time>
+                            <time className='article-date'>{formatDate(item.date)}</time>
                             <h2 className='article-title'>{item.title}</h2>
-                            <p className='article-content'>{item.desc}</p>
+                            <p className='article-content'>{item.descr}</p>
                         </div>
                     </article>
                 ))
             ) : (
-                <p className="error-message">Nema dostupnih članaka</p>
+                <div>Nema dostupnih članaka</div>
             )}
+       </div>
+       <div>
+            { data.length > 2  ? <button>OTVORI SVE</button> : null}
+        </div>
         </>
     )
 }

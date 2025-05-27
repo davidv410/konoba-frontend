@@ -1,63 +1,65 @@
 import './MenuItem.css'
-import artiklImg from '../../../assets/konobapng.png'
-import juhaJedan from'../../../assets/juha1.jpg'
-import juhaDva from'../../../assets/juha2.jpg'
-import juhaTri from'../../../assets/juha3.jpg'
-import juhaCetri from'../../../assets/juha4.jpg'
 import { useState, useEffect } from 'react'
+import useFetch from '../../../hooks/useFetch'
+import MenuItemMore from '../menu-item-more/menuItemMore'
 
-const MenuItem = ({ displayThisMenu, setDisplayThisMenu }) => {
+const MenuItem = ({menuID, subgroupID, selectSgID, selectMenuID}) => {
 
-    const [menuItems, setMenuItems] = useState([ 
-        { foodType: 'Juha', name: 'Juha 1', price: 10, desc: 'Krem juha s itd itd itd', image: juhaJedan },
-        { foodType: 'Juha', name: 'Juha 2', price: 12, desc: 'Goveđa juha', image: juhaDva  },
-        { foodType: 'Juha', name: 'Juha 3', price:  8, desc: 'Juha od rajcice', image: juhaTri  },
-        { foodType: 'Juha', name: 'Juha 4', price: 11, desc: 'Juha od gljiva', image: juhaCetri  },
+    const { data, error, isLoading } = useFetch(`http://localhost:5000/menu-items`)
+    const [test, setTest] = useState()
 
-        { foodType: 'Deserti', name: 'Desert 1', price: 10, desc: 'Banana kolac' },
-        { foodType: 'Deserti', name: 'Desert 2', price: 12, desc: 'Lambada' },
-        { foodType: 'Deserti', name: 'Desert 3', price:  8, desc: 'Baklava' },
-        { foodType: 'Deserti', name: 'Desert 4', price: 11, desc: 'Cupavci' },
-     ])
+    const firstSubgroupID = data
+        .filter(item => item.menu_id === menuID)
+        .map(item => item.subgroup_id)
+        .find((id) => id !== undefined);
 
-
-     const [filteredItems, setFilteredItems] = useState([])
-
-    const filterMenuItems = (type) => {
-        const filtered = menuItems.filter(item => item.foodType === type)
-        setFilteredItems(filtered)
-    }
-
-    useEffect(() => {
-        if (!displayThisMenu) {
-            setDisplayThisMenu(menuItems[0].foodType)
-        } else {
-            filterMenuItems(displayThisMenu)
-        }
-    }, [displayThisMenu, menuItems])
-   
-
-    return(
+    if (isLoading) {return <div>Loading...</div>; }
+    if (error) {return <div>Error: {error.message}</div>;}
+    
+    return (
         <>
-
-        {
-            filteredItems.map(item => (
-                <section className="menu-item-container">
-                    <div className="menu-item-img-div"><img src={item.image} alt="Menu Item image" className="menu-item-img"/></div>
-                    <div className="menu-item-info-div">
-                        <div className="menu-item-info-one">
-                            <h2 className="menu-item-name">{item.name}</h2>
-                            <div className='menu-item-price-div'>
-                                <div className='menu-item-price-border'></div>
-                                <p className="menu-item-price">${item.price}</p>
+            {data.map((item, i) => (
+                item.menu_id === menuID ?
+                    !selectMenuID ? 
+                        item.subgroup_id === firstSubgroupID ?
+                            <div className={`menu-item-div-wrap ${!item.price ? 'span-glavna' : null}`} key={i}>
+                                <div className='menu-item-div'>
+                                    <div className='menu-item-left'>
+                                        <p className='menu-item-title'>{item.name}</p>
+                                        <p className='item-desc'>{item.description}</p>
+                                    </div>
+                                    <div className={`menu-item-right-wrap ${!item.price ? 'meat-cont' : null}`}>
+                                        <div className='menu-item-right'>
+                                            <div className='item-line'></div>
+                                            <div className='item-price'>{item.price}</div>
+                                            { item.price ?  <div className='item-price-currency'>KM</div> : null}
+                                        
+                                        </div>
+                                        <MenuItemMore itemID={item.id}/>
+                                    </div>
+                                </div>
                             </div>
-                        </div> 
-                        <div className="menu-item-info-two">{item.desc}</div>
-                    </div>
-                </section>
-            ))
-        }
-           
+                        : null
+                     : item.subgroup_id === selectSgID ?
+                     <div className='menu-item-div-wrap' key={i}>
+                                <div className='menu-item-div'>
+                                    <div className='menu-item-left'>
+                                        <p className='menu-item-title'>{item.name}</p>
+                                        <p className='item-desc'>{item.description}</p>
+                                    </div>
+                                    <div className='menu-item-right-wrap'>
+                                        <div className='menu-item-right'>
+                                            <div className='item-line'></div>
+                                            <div className='item-price'>{item.price}</div>
+                                            <div className='item-price-currency'>KM</div>
+                                        </div>
+                                        <MenuItemMore itemID={item.id}/>
+                                    </div>
+                                </div>
+                            </div>
+                     : null
+                : null
+            ))}
         </>
     )
 }

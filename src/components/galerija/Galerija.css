@@ -2,7 +2,9 @@
     width: 100%;
     height: fit-content;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 6vw 0;
 }
 
@@ -13,11 +15,112 @@
     gap: 2px;
 }
 
-.block {
-   
-    aspect-ratio: 1;
-    background-size: cover;
+.image-block {
+    object-fit: cover;
     border-radius: 4px;
+    cursor: pointer;
+    aspect-ratio: 1;
+}
+
+.open-image-div-wrap {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.938);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50.03%, -50.03%);
+    text-align: center;
+    z-index: 100;
+}
+
+.open-image-div {
+    width: 600px;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 111;
+}
+
+.close-image {
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.close-icon {
+    color: white;
+    height: 50px;
+    width: 50px;
+}
+
+.move-left-image {
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+   
+    position: fixed;
+    bottom: 40%;
+    left: 0;
+    text-align: center;
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0);
+
+    margin: 0 0 0 15px;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+}
+
+.move-right-image {
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    
+    position: fixed;
+    bottom: 40%;
+    right: 0;
+    text-align: center;
+    border: 0px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0);
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+}
+
+.left-icon {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    color: white;
+}
+
+.right-icon {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    color: white;
 }
 
 @media (max-width: 810px) {
@@ -25,3 +128,24 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+@media (max-width: 640px) {
+    .open-image-div{
+        width: calc(100% - 40px);
+        height: 50%;
+    }
+}
+
+/* @media (max-width: 540px) {
+    .open-image-div{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 440px) {
+    .open-image-div{
+        width: calc(100% - 40px);
+        height:  40%;
+    }
+} */

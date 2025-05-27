@@ -3,14 +3,16 @@ import { createRoot } from 'react-dom/client'
 import App from './components/App'
 import Article from './components/Article/Article'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import BookConfirm from './components/bookatable/bookConfirm/BookConfirm'
 
 const router = createBrowserRouter(
   [
     { path: "/", element: <App /> },
-    { path: "/article/:title", element: <Article /> }
+    { path: "/blog/:title", element: <Article /> },
+    { path: "admin-confirm", element: <BookConfirm />}
   ],
   {
-    basename: "/konoba-frontend",
+    basename: "/konoba-frontend/",
   }
 )
 

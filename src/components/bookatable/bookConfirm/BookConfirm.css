@@ -1,0 +1,50 @@
+.pop-up {
+    display: none;
+}
+
+.popUpActive {
+    display: block;
+}
+
+.admin-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.admin-nav-cont {
+    height: 100%;
+    width: fit-content;
+    background-color: rgb(26, 18, 13);
+}
+
+.admin-ul {
+    list-style-type: none;
+    margin: 0 20px;
+    padding: 0;
+}
+
+.admin-li {
+    margin: 10px 0;
+    padding: 0;
+    cursor: pointer;
+    font-family: Afacad;
+    color: rgb(255, 255, 255);
+}
+
+.admin-active-li {
+    color: rgb(138, 138, 138);
+}
+
+.booking-application {
+    margin: 10px;
+    font-family: Afacad;
+}
+
+.admin-accept-btn {
+    cursor: pointer;
+}
+
+.admin-deny-btn {
+    cursor: pointer;
+}
