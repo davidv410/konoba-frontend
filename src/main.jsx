@@ -10,10 +10,7 @@ const router = createBrowserRouter(
     { path: "/", element: <App /> },
     { path: "/blog/:title", element: <Article /> },
     { path: "admin-confirm", element: <BookConfirm />}
-  ],
-  {
-    basename: "/",
-  }
+  ]
 )
 
 createRoot(document.getElementById('root')).render(
