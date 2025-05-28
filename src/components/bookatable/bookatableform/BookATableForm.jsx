@@ -222,14 +222,14 @@ const BookATableForm = () => {
                     className="people-input input" 
                     value={formData.people}
                     onChange={handleChange}>
-                    <option>izaberi</option>
-                    <option>1 osoba</option>
-                    <option>2 osobe</option>
-                    <option>3 osobe</option>
-                    <option>4 osobe</option>
-                    <option>5 osoba</option>
-                    <option>6 osoba</option>
-                    <option>7 osoba</option>
+                    <option value="">izaberi</option>
+                    <option value="1">1 osoba</option>
+                    <option value="2">2 osobe</option>
+                    <option value="3">3 osobe</option>
+                    <option value="4">4 osobe</option>
+                    <option value="5">5 osoba</option>
+                    <option value="6">6 osoba</option>
+                    <option value="7">7 osoba</option>
                     </select>
                     {error?.people && <p className="error-message">{error.people}</p>} 
                 </div>
