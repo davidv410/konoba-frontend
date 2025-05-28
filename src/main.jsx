@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './components/App'
 import Article from './components/Article/Article'
-import { createHashRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import BookConfirm from './components/bookatable/bookConfirm/BookConfirm'
 
 const router = createBrowserRouter(
@@ -12,7 +12,7 @@ const router = createBrowserRouter(
     { path: "admin-confirm", element: <BookConfirm />}
   ],
   {
-    basename: "/konoba-frontend",
+    basename: "/konoba-frontend/",
   }
 )
 
