@@ -40,7 +40,7 @@ const ContactForm = () => {
 
     const contactSubmit = async () => {
        try{
-           const sendData = await fetch('http://localhost:5000/contact', {
+           const sendData = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json',
