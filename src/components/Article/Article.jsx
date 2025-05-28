@@ -11,7 +11,7 @@ const Article = () => {
     const [filteredBlog, setFilteredBlog] = useState([])
 
     const { title } = useParams();
-    const { data, error, isLoading } = useFetch("http://localhost:5000/blog");
+    const { data, error, isLoading } = useFetch(`${import.meta.env.VITE_API_URL}/blog`);
 
     let str = title;
     let newTitle = str.replace(/-/g, " ");

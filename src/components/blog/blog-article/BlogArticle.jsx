@@ -8,7 +8,7 @@ const BlogArticle = () => {
     
     const navigate = useNavigate();
 
-    const { data, error, isLoading } = useFetch("http://localhost:5000/blog");
+    const { data, error, isLoading } = useFetch(`${import.meta.env.VITE_API_URL}/blog`);
 
      const displayedItems = data?.slice(0, 2)
 

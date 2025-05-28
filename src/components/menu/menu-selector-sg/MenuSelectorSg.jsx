@@ -6,7 +6,7 @@ import useFetch from '../../../hooks/useFetch'
 
 const MenuSelectorSg = ({ menuID }) => {
 
-    const { data, error, isLoading } = useFetch("http://localhost:5000/menus-sg")
+    const { data, error, isLoading } = useFetch(`${import.meta.env.VITE_API_URL}/menus-sg`)
 
     const [selectSgID, setSelectSgID] = useState()
     const [selectMenuID, setSelectMenuID] = useState()

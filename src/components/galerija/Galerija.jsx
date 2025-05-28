@@ -9,7 +9,7 @@ import useFetch from './../../hooks/useFetch'
 
 const Galerija = forwardRef((props, ref) => {
 
-    const { data, error, isLoading } = useFetch("http://localhost:5000/gallery-route")
+    const { data, error, isLoading } = useFetch(`${import.meta.env.VITE_API_URL}/gallery-route`)
 
     const [openImage, setOpenImage] = useState()
     const [currentIndex, setCurrentIndex] = useState()

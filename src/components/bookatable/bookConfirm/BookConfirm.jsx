@@ -82,7 +82,7 @@ const BookConfirm = () => {
 
     const removeReservation = async (id) => {
         try{
-            const sendData = await fetch(`http://localhost:5000/book-table-list/${id}`, {
+            const sendData = await fetch(`${import.meta.env.VITE_API_URL}/book-table-list/${id}`, {
                 method: 'DELETE'
             })
             if(sendData.ok){

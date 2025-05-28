@@ -5,7 +5,7 @@ import MenuItemMore from '../menu-item-more/menuItemMore'
 
 const MenuItem = ({menuID, subgroupID, selectSgID, selectMenuID}) => {
 
-    const { data, error, isLoading } = useFetch(`http://localhost:5000/menu-items`)
+    const { data, error, isLoading } = useFetch(`${import.meta.env.VITE_API_URL}/menu-items`)
     const [test, setTest] = useState()
 
     const firstSubgroupID = data

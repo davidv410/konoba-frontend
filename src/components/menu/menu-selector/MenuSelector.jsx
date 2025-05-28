@@ -5,7 +5,7 @@ import useFetch from '../../../hooks/useFetch'
 
 const MenuSelector = ({ showAll }) => {
 
-    const { data, error, isLoading } = useFetch("http://localhost:5000/menus")
+    const { data, error, isLoading } = useFetch(`${import.meta.env.VITE_API_URL}/menus`)
 
     const displayedItems = showAll ? data : data?.slice(0, 2)
 

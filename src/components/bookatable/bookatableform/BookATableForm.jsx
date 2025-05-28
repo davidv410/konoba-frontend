@@ -75,7 +75,7 @@ const BookATableForm = () => {
 
     const bookATableFunc = async (e) => {
         try{
-            const sendData = await fetch('http://localhost:5000/book-table', {
+            const sendData = await fetch(`${import.meta.env.VITE_API_URL}/book-table`, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json',

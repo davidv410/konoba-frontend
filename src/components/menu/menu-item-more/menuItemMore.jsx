@@ -3,7 +3,7 @@ import useFetch from '../../../hooks/useFetch'
 
 const MenuItemMore = ({ itemID }) => {
 
-    const { data, error, isLoading } = useFetch("http://localhost:5000/menu-item-more")
+    const { data, error, isLoading } = useFetch(`${import.meta.env.VITE_API_URL}/menu-item-more`)
 
     const filter = data.filter(item => {
         if(item.menu_item_id === itemID) {

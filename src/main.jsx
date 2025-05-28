@@ -11,6 +11,10 @@ const router = createBrowserRouter(
     { path: "/blog/:title", element: <Article /> },
     { path: "admin-confirm", element: <BookConfirm />}
   ]
+  // ,
+  // {
+  //   basename: "/",  // kad pusham ovo sve obrisat
+  // }
 )
 
 createRoot(document.getElementById('root')).render(
