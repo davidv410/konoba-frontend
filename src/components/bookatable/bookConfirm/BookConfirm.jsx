@@ -14,7 +14,7 @@ const BookConfirm = () => {
         setBackendRoute(route)
     }
 
-    const { data, error, isLoading, refetch } = useFetch(`http://localhost:5000/${backendRoute}`);
+    const { data, error, isLoading, refetch } = useFetch(`${import.meta.env.VITE_API_URL}/${backendRoute}`);
 
     const [popUp, setPopUp] = useState(false)
     const [popUpType, setPopUpType] = useState()
@@ -58,7 +58,7 @@ const BookConfirm = () => {
 
     const postDecisionToBackend = async (id, decision) => {
         try{
-            const sendData = await fetch ('http://localhost:5000/book-table-confirm', {
+            const sendData = await fetch (`${import.meta.env.VITE_API_URL}/book-table-confirm`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ const BookConfirm = () => {
 
     const deleteBlog = async (id) => {
         try{
-            const sendData = await fetch(`http://localhost:5000/blog/${id}`, {
+            const sendData = await fetch(`${import.meta.env.VITE_API_URL}/${id}`, {
                 method: 'DELETE'
             })
             if(sendData.ok){
@@ -145,7 +145,7 @@ const BookConfirm = () => {
     const addBlog = async () => {
         console.log(blogTemplate)
         try{
-            const sendData = await fetch('http://localhost:5000/blog', {
+            const sendData = await fetch(`${import.meta.env.VITE_API_URL}/blog`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
