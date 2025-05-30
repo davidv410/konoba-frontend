@@ -32,7 +32,7 @@ const BlogArticle = () => {
                 displayedItems.map(item => (
                     <article key={item.title} className='article-wrap' onClick={() => openArticle(item.title)}>
                         <div className='article-img-div'>
-                            <img src={`./src/assets/${item.image}`} alt={item.image} className='article-img'/>
+                            <img src={`${item.image}`} alt={item.image} className='article-img'/>
                         </div>
                         <div className='article-info'>
                             <time className='article-date'>{formatDate(item.date)}</time>
