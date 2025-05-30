@@ -225,7 +225,7 @@ const BookConfirm = () => {
                         
                     <article key={item.title} className='article-wrap' onClick={() => openArticle(item.title)} style={{ margin: "10px" }}>
                         <div className='article-img-div'>
-                            <img src={`./dist/assets/${item.image}`} alt={item.image} className='article-img'/>
+                            <img src={`${item.image}`} alt={item.image} className='article-img'/>
                         </div>
                         <div className='article-info'>
                             <time className='article-date'>{item.date}</time>
