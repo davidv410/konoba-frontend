@@ -47,7 +47,7 @@ const Galerija = forwardRef((props, ref) => {
                     data.map((image, i) => (
                         
                         <div className='block' key={i} onClick={() => openImageFunc(i)} >
-                            <img className='image-block' style={{ width: "100%", height: "100%" }} src={`./src/assets/${image.image_path}`} alt="" />
+                            <img className='image-block' style={{ width: "100%", height: "100%" }} src={`${image.image_path}`} alt="" />
                         </div>
                         
                     ))
@@ -57,7 +57,7 @@ const Galerija = forwardRef((props, ref) => {
                 { openImage ?
                     <div className='open-image-div-wrap'>
                         <div className="open-image-div">
-                            <img src={`./src/assets/${openImage}`} className='article-img'/>
+                            <img src={`${openImage}`} className='article-img'/>
                         </div>
                             <button onClick={() => closeImageFunc()} className="close-image"><IoMdClose className='close-icon'/></button>
                             <button onClick={() => moveLeft()} className="move-left-image"><MdArrowBackIos className='left-icon'/></button>

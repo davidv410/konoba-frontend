@@ -11,7 +11,7 @@ const router = createBrowserRouter(
     { path: "/blog/:title", element: <Article /> },
     { path: "admin-confirm", element: <BookConfirm />}
   ]
-  ,
+  // ,
   // {
   //   basename: "/konoba-frontend",  // kad pusham ovo sve obrisat
   // }
