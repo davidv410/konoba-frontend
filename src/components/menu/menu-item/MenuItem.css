@@ -160,7 +160,8 @@
     display: flex;
     width: 100%;
    
-    height: 100px;
+    height: fit-content;
+    padding: 10px 0;
     justify-content: space-between;
     margin: 0 20px;
 }
@@ -178,7 +179,7 @@
 
 .menu-item-right-wrap {
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 
 .menu-item-more {
@@ -231,7 +232,8 @@
     }
 
     .menu-item-div {
-        height: 70px;
+        height: fit-content;
+        padding: 10px 0;
     }
 
     .menu-item-title {
@@ -253,7 +255,8 @@
 
 @media (max-width: 800px) {
     .menu-item-div {
-        height: 70px;
+        height: fit-content;
+        padding: 10px 0;
     }
 
     .menu-item-title {
