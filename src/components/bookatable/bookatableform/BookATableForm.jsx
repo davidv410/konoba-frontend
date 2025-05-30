@@ -1,5 +1,6 @@
 import './BookATableForm.css'
 import { useState } from 'react'
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 const BookATableForm = () => {
 
@@ -71,7 +72,7 @@ const BookATableForm = () => {
         return true; // Validation passed
     }
 
-    const [successMsg, setSuccessMsg] = useState()
+    const [successMsg, setSuccessMsg] = useState("")
 
     const bookATableFunc = async (e) => {
         try{
@@ -84,7 +85,7 @@ const BookATableForm = () => {
             })
             if(sendData.ok){
                 const data = await sendData.json()
-                setSuccessMsg('Upit za rezervaciju je poslan, potvrdu rezervacije cete dobiti putem emaila')
+                setSuccessMsg('Upit za rezervaciju je poslan, potvrdu rezervacije ćete dobiti putem e-maila')
                 setFormData({
                     name: "",
                     email: "",
@@ -236,7 +237,7 @@ const BookATableForm = () => {
             {error?.general && <p className="error-message">{error.general}</p>}
             <button className='submit-button'>POŠALJI UPIT</button>
 
-            { successMsg ? <div className='book-success-msg'>{successMsg} <p className="close-success" onClick={() => closeSuccess()}>x</p> </div> : null}
+            { successMsg ? <div className='book-success-msg'>{successMsg} <p className="close-success" onClick={() => closeSuccess()}><IoCloseCircleOutline /></p> </div> : null}
         
         </form>
 

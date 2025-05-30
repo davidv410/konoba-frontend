@@ -31,7 +31,7 @@ const Header = ({ menuScrollToFunc, blogRef, menuRef, galerijaRef, bookATableRef
         <header>
             <div className='header-inside'>
                 <div className='header-img-container'>
-                    <a href="http://localhost:5173/konoba-frontend/" className='header-a-container'><img src={logo} className='logo' alt="Konoba Ivina Arka logo" /></a>
+                    <a href="https://konoba-frontend.vercel.app/" className='header-a-container'><img src={logo} className='logo' alt="Konoba Ivina Arka logo" /></a>
                 </div>
                 <div className='navigation-container'>
                     <nav>

@@ -86,19 +86,22 @@ label {
     color: rgb(0, 185, 0);
     background-color: white;
     border: 1px solid rgb(219, 219, 219);
-    padding: 2vw;
+    padding: 20px;
+    width: fit-content;
     position: fixed;
     display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     align-items: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.close-success {
-    color: black;
-    margin: 10px;
-}
+
 
 .checkInfoDiv {
     font-family: Afacad;
@@ -155,6 +158,12 @@ label {
 @media (max-width: 740px) {
     .input{
         width: 250px;
+    }
+}
+
+@media (max-width: 600px){
+    .book-success-msg{
+        font-size: 18px;
     }
 }
 

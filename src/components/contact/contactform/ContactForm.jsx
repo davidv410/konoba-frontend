@@ -1,5 +1,6 @@
 import './ContactForm.css'
 import { useState } from 'react'
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 const ContactForm = () => {
 
@@ -50,7 +51,7 @@ const ContactForm = () => {
             if(sendData.ok){
                 const data = await sendData.json()
                 setFormData({ name: '', email: '', phone: '', message: '' });
-                setSuccessMessage("Email uspješno poslan")
+                setSuccessMessage("E-mail uspješno poslan.")
             }else{
                 const error = await sendData.json()
                 setErrors(error.message || 'Server error'); 
@@ -103,10 +104,12 @@ const ContactForm = () => {
                             </div>
             : null}
 
-            { successMessage ? <div className='contact-success-msg'>{successMessage} <p  className="close-success" onClick={() => closeSuccess()}>x</p></div> : null}
+            { successMessage ? <div className='contact-success-msg'>{successMessage} <p  className="close-success" onClick={() => closeSuccess()}><IoCloseCircleOutline />
+
+</p></div> : null}
 
             <form action="" className='contact-form' onSubmit={checkInfo} method='POST'>
-                <div className='contact-heading-div'><h3>Posaljite poruku</h3></div>
+                <div className='contact-heading-div'><h3>Pošaljite poruku</h3></div>
                 <div className='input-div name'>
                     <label htmlFor="name">Ime</label>
                     <input 
