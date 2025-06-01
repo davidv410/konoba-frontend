@@ -101,7 +101,7 @@ const BookConfirm = () => {
 
     const deleteBlog = async (id) => {
         try{
-            const sendData = await fetch(`${import.meta.env.VITE_API_URL}/${id}`, {
+            const sendData = await fetch(`${import.meta.env.VITE_API_URL}/blog/${id}`, {
                 method: 'DELETE'
             })
             if(sendData.ok){
@@ -225,7 +225,7 @@ const BookConfirm = () => {
                         
                     <article key={item.title} className='article-wrap' onClick={() => openArticle(item.title)} style={{ margin: "10px" }}>
                         <div className='article-img-div'>
-                            <img src={`${item.image}`} alt={item.image} className='article-img'/>
+                            <img src={`${item.image}` || 'nema.jpg'} alt={item.image} className='article-img'/>
                         </div>
                         <div className='article-info'>
                             <time className='article-date'>{item.date}</time>

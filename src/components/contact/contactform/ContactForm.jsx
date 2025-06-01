@@ -162,7 +162,7 @@ const ContactForm = () => {
                     />
                     {errors ? <p className="error-message">{errors.message}</p> : null}
                 </div>
-                <button className='contact-form-button'>POSALJI PORUKU</button>
+                <button className='contact-form-button'>POŠALJI PORUKU</button>
             </form>
         </>
     )

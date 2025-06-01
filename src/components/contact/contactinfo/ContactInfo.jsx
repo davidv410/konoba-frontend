@@ -36,10 +36,10 @@ const ContactInfo = () => {
                     <RiArrowRightLine className='contact-arrow'/>
                 </div>
                 <div className='contact-info-div align'>
-                    <a href="mailto:konoba@gmail.com" style={{ color: "black" }}>
+                    <a href="mailto:konobaivinaarka1@gmail.com" style={{ color: "black" }}>
                     <div className='align-div'>
                         <FiMail  className='icon'/>
-                        <div>konoba@gmail.com</div>
+                        <div>konobaivinaarka1@gmail.com</div>
                     </div>
                     </a>
                     <RiArrowRightLine className='contact-arrow'/>

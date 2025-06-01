@@ -20,7 +20,7 @@ function App() {
     if(ref === "top") {
       window.scrollTo({ top: 0, behavior: "smooth" })
     } else {
-      const headerHeight = 80;
+      const headerHeight = 150;
       const elementPosition = ref.current.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerHeight;
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
@@ -37,7 +37,7 @@ function App() {
         <Galerija ref={galerijaRef}/>
         <BookATable ref={bookATableRef}/>
         <Contact ref={contactRef}/>
-        <Footer/>
+        <Footer menuScrollToFunc={menuScrollToFunc} blogRef={blogRef} menuRef={menuRef} galerijaRef={galerijaRef} bookATableRef={bookATableRef} contactRef={contactRef}/>
       </div>
 
     </>

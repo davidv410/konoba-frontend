@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './Header.css'
 import { PiInstagramLogoBold } from "react-icons/pi";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { TiSocialFacebookCircular } from "react-icons/ti";
+import { GiHamburgerMenu } from "react-icons/gi";
 import logo from '../../../assets/logo.png';
 import { useNavigate, useLocation } from 'react-router-dom'
 

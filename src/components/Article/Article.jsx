@@ -49,7 +49,7 @@ const Article = () => {
                         <h3 className="article-desc-separate">{item.descr}</h3>
                     </div>
                     <div className="second-div">
-                        <img src={`${item.image}`} alt={item.image} className='article-img-separate'/>
+                        <img src={`${item.image}` || 'nema.jpg'} alt={item.image} className='article-img-separate'/>
                         <div className="article-content-separate" style={{ whiteSpace: 'pre-line' }}>{item.content}</div>
                     </div>
                 </div>

@@ -45,9 +45,11 @@ const BlogArticle = () => {
                 <div>Nema dostupnih članaka</div>
             )}
        </div>
-       <div>
-            { data.length > 2  ? <button>OTVORI SVE</button> : null}
-        </div>
+        { data.length > 2  ?  
+            <div className='button-open-all-div'>
+                <button className='button-open-all' onClick={() => openAllBlogs()}>OTVORI SVE</button>
+            </div>
+        : null}
         </>
     )
 }
