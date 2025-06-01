@@ -32,10 +32,11 @@ const Footer = ({ menuScrollToFunc, blogRef, menuRef, galerijaRef, bookATableRef
                     </ul>
 
                 </div>
-
-                <div>
+                
+                <div className='creator-wrap'>
                     <p className='creator'>David Vrgoč</p>
                 </div>
+
 
             </section>
 

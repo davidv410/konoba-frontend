@@ -41,6 +41,7 @@ footer::before {
     font-size: 18px;
 }
 
+
 .creator {
     font-family: Afacad;
     font-size: 16px;
@@ -73,6 +74,10 @@ footer::before {
 
 .face-wrap {
     width: 30px;
+}
+
+.c-info {
+    text-decoration: none;
 }
 
 @media (max-width: 900px) {
@@ -120,10 +125,6 @@ footer::before {
         display: flex;
     }
 
-    .footer-ul {
-        margin: 10px 0;
-    }
-
      .c-info {
         margin: 10px 0;
     }
@@ -131,4 +132,10 @@ footer::before {
     .face-wrap {
        margin: -3px 0 0 0;
     } 
+
+    .creator-wrap {
+        width: 277px;
+        display: flex;
+        justify-content: start;
+    }
 }
