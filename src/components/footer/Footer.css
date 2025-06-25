@@ -48,13 +48,10 @@ footer::before {
     color: rgb(199, 199, 199);
 }
 
-<<<<<<< HEAD
 .creator-wrap {
     margin: 20px 0 0 0;
 }
 
-=======
->>>>>>> 2a13552ab9cacdf6bf9500b9f7c1c46aae6ce6c6
 .footer-social-insta {
     width: 90%;
     height: 90%;
@@ -65,11 +62,7 @@ footer::before {
 .footer-social-face {
     width: 100%;
     height: 100%;
-<<<<<<< HEAD
     margin: -2px 0 0 0;
-=======
-    margin: 0 0 0 -1px;
->>>>>>> 2a13552ab9cacdf6bf9500b9f7c1c46aae6ce6c6
     cursor: pointer;
     color: rgb(199, 199, 199);
 }
@@ -79,13 +72,10 @@ footer::before {
     color: rgb(199, 199, 199);
 }
 
-<<<<<<< HEAD
 .a-tag {
     color: rgb(199, 199, 199);
 }
 
-=======
->>>>>>> 2a13552ab9cacdf6bf9500b9f7c1c46aae6ce6c6
 .insta-wrap {
     width: 30px;
 }
@@ -98,7 +88,6 @@ footer::before {
     text-decoration: none;
 }
 
-<<<<<<< HEAD
 .footer-title {
     color: white;
     padding: 0 5px 0 0;
@@ -110,8 +99,6 @@ footer::before {
 
 
 
-=======
->>>>>>> 2a13552ab9cacdf6bf9500b9f7c1c46aae6ce6c6
 @media (max-width: 900px) {
 
     .footer-ul {
@@ -141,14 +128,11 @@ footer::before {
     }
 }
 
-<<<<<<< HEAD
 @media (min-width: 440px) {
     .footer-title {
         text-align: center;
     }
 }
-=======
->>>>>>> 2a13552ab9cacdf6bf9500b9f7c1c46aae6ce6c6
 
 @media (max-width: 440px) {
     .footer-inside {
@@ -173,7 +157,6 @@ footer::before {
        margin: -3px 0 0 0;
     } 
 
-<<<<<<< HEAD
 
 
     .footer-social-insta {
@@ -206,11 +189,4 @@ footer::before {
         margin: 0 10px 0 0 ;
     }
 
-=======
-    .creator-wrap {
-        width: 277px;
-        display: flex;
-        justify-content: start;
-    }
->>>>>>> 2a13552ab9cacdf6bf9500b9f7c1c46aae6ce6c6
 }

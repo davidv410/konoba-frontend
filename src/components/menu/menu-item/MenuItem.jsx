@@ -30,16 +30,9 @@ const MenuItem = ({menuID, subgroupID, selectSgID, selectMenuID}) => {
                                     </div>
                                     <div className={`menu-item-right-wrap ${!item.price ? 'meat-cont' : null}`}>
                                         <div className='menu-item-right'>
-<<<<<<< HEAD
                                              <div className='item-line'></div>
                                              <div className='item-price'>{item.price}</div>
                                             { item.price ?  <div className='item-price-currency'>KM</div> : null}
-=======
-                                            <div className='item-line'></div>
-                                            <div className='item-price'>{item.price}</div>
-                                            { item.price ?  <div className='item-price-currency'>KM</div> : null}
-                                        
->>>>>>> 2a13552ab9cacdf6bf9500b9f7c1c46aae6ce6c6
                                         </div>
                                         <MenuItemMore itemID={item.id}/>
                                     </div>
