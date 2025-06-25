@@ -1,0 +1,114 @@
+.article-container-separate{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-wrap-separate {
+    margin: 170px 0 0 0;
+    /* width: calc(100% - 50%);  */
+    width: 600px;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-div {
+    width: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(165, 107, 107); */
+}
+
+.second-div {
+    width: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(107, 165, 151); */
+}
+
+.article-img-separate {
+    width: 140%;
+    height: 400px;
+    object-fit: cover;
+    margin: 0 0 40px 0;
+}
+
+.article-title-separate { 
+    all:unset; 
+    font-family: Fraunces;
+    font-size: 56px; 
+    font-weight: 300;
+}
+.article-date-separate  { 
+    all:unset; 
+    font-family: Afacad;
+    font-size: 24px;
+    color: rgb(149, 149, 149);
+}
+
+.article-desc-separate  { 
+    all:unset; 
+    font-family: Afacad;
+    font-size: 24px;
+    margin:40px 0;
+}
+
+.article-content-separate {
+    font-family: Afacad;
+    font-size: 20px;
+}
+
+.section-divide-margin {
+    margin: 50px 0;
+}
+
+
+@media (max-width: 1200px) {
+
+    .article-img-separate {
+        width: 120%;
+    }
+    .article-title-separate { 
+        font-size: 44px; 
+    }
+
+    .article-date-separate {
+        font-size: 22px; 
+    }
+
+    .article-desc-separate {
+        font-size: 22px; 
+    }
+}
+
+@media (max-width: 800px) {
+
+    .article-img-separate {
+        width: 100%;
+    }
+
+    .article-title-separate { 
+        font-size: 32px; 
+    }
+
+    .article-date-separate {
+        font-size:16px; 
+    }
+
+    .article-desc-separate {
+        font-size:16px;
+    }
+
+    .article-content-separate {
+        font-size:16px;
+    }
+}

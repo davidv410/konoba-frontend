@@ -1,0 +1,75 @@
+.add-item-pop-up {
+    display: none;
+}
+
+.add-item-pop-up-active {
+    display: block;
+}
+
+.button-wrap-cont {
+    display: flex; 
+    margin: 20px;
+}
+
+.button-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.chooseMenu-btn {
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    margin: 5px 0;
+    border: 1px solid rgb(177, 177, 177);
+    padding: 5px 5px;
+    border-radius: 4px;
+    font-family: Afacad;
+    color: rgb(34, 34, 34);
+}
+
+.active-btn {
+    background-color: rgb(211, 211, 211);
+}
+
+.item-wrap {
+    display: flex;
+    justify-content: space-between;
+    font-family: Afacad;
+    margin: 2px 10px;
+    width: 300px;
+}
+
+.menu-blocks {
+    display: flex; 
+    flex-wrap: wrap; 
+    text-align: center;
+    margin: 0 20px;
+}
+
+.subgroup-titles {
+    font-family: Afacad;
+    font-weight: bold;
+}
+
+.delete-btn {
+    background-color: rgb(224, 4, 4);
+    color: white;
+    font-family: Afacad;
+    border: 2px solid rgb(141, 0, 0);
+    border-radius: 4px;
+    padding: 2px 7px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 0 0 10px;
+}
+
+.add-btn {
+    background-color: rgb(2, 231, 52);
+    color: white;
+    font-family: Afacad;
+    border: 2px solid rgb(0, 211, 18);
+    border-radius: 4px;
+    padding: 2px 7px;
+    cursor: pointer;
+}

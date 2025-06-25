@@ -1,0 +1,188 @@
+label {
+    padding: 0 0 -0 5px;
+    margin: 0 0 -5px 0;
+}
+
+.input-wrap {
+    font-family: Afacad;
+}
+
+.input {
+    all: unset;
+    box-sizing: border-box;
+    border: 1px solid rgb(175, 175, 175);
+    height: 50px;
+    width: 350px;
+    padding: 12px;
+    margin: 10px 5px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.input::placeholder {
+    color: rgb(175, 175, 175);
+}
+
+.book-a-table-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.people-input {
+    padding: 15px;
+    line-height: bottom;
+    vertical-align: top;
+}
+
+.submit-button {
+    width: 100%;
+    height: 50px;
+    font-family: Afacad;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    grid-column: span 2;
+    background-image: url('../../../assets/wood4test.jpg');
+    cursor: pointer;
+}
+
+.input-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.error-message {
+    color: red;
+}
+
+.success-message-div {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.success-message {
+    color: rgb(0, 197, 0);
+    background-color: white;
+    border: 1px solid rgb(190, 190, 190);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.close-success {
+    color: black;
+    cursor: pointer;
+}
+
+.book-success-msg {
+    font-family: Afacad;
+    font-size: 20px;
+    border-radius: 4px;
+    color: rgb(0, 185, 0);
+    background-color: white;
+    border: 1px solid rgb(219, 219, 219);
+    padding: 20px;
+    width: fit-content;
+    position: fixed;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.checkInfoDiv {
+    font-family: Afacad;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.send-btn {
+    font-family: Afacad;
+    font-size: 12px;
+    padding: 8px 15px;
+    border: 1px solid black;
+    margin: 0 10px 0 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin: 0 0 5px 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.quit-btn {
+    font-family: Afacad;
+    font-size: 12px;
+    padding: 8px 15px;
+    border: 1px solid black;
+    margin: 0 10px 0 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    cursor: pointer;
+    width: 100%;
+     background-color: rgba(0, 0, 0, 0);
+}
+
+.check-info-p {
+    font-family: Fraunces;
+}
+
+.check-info-info {
+    margin: 10px 0;
+}
+
+.info-p {
+     margin: 5px 0;
+}
+
+@media (max-width: 740px) {
+    .input{
+        width: 250px;
+    }
+}
+
+@media (max-width: 600px){
+    .book-success-msg{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 550px) {
+    .book-a-table-form {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .submit-button {
+        grid-column: span 1;
+    }
+
+    .input{
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    .book-a-table-form {
+        width: 100%;
+    }
+}

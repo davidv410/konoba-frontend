@@ -1,0 +1,30 @@
+.image-cont-wrap{
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-cont {
+    display: flex;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+.delete-img-btn {
+    position: absolute;
+    background-color: rgb(224, 4, 4);
+    color: white;
+    font-family: Afacad;
+    border: 2px solid rgb(141, 0, 0);
+    border-radius: 4px;
+    padding: 2px 7px;
+    cursor: pointer;
+    font-weight: bold;
+}

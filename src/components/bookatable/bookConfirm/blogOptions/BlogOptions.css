@@ -1,0 +1,58 @@
+.uredi-blog{
+     width: 70px;
+    background-color: rgb(0, 110, 255);
+    color: white;
+    font-family: Afacad;
+    border: 2px solid rgb(8, 46, 214);
+    border-radius: 4px;
+    padding: 2px 7px;
+    cursor: pointer;
+    font-weight: bold;
+    position: static; /* Remove absolute positioning */
+    margin: 0;
+    z-index: 800;
+}
+
+.izbrisi-blog{
+    width: 70px;
+    background-color: rgb(224, 4, 4);
+    color: white;
+    font-family: Afacad;
+    border: 2px solid rgb(141, 0, 0);
+    border-radius: 4px;
+    padding: 2px 7px;
+    cursor: pointer;
+    font-weight: bold;
+    position: static; /* Remove absolute positioning */
+    margin: 0;
+}
+
+.dodaj-blog-btn {
+    background-color: rgb(2, 231, 52);
+    color: white;
+    font-family: Afacad;
+    border: 2px solid rgb(0, 211, 18);
+    border-radius: 4px;
+    padding: 2px 7px;
+    cursor: pointer;
+    margin: 10px 0 0 10px;
+}
+
+.article-wrap {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    gap: 18px;
+}
+
+.article-info {
+    flex: 1 1 auto;
+}
+
+.article-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: auto;
+    align-items: flex-end;
+}

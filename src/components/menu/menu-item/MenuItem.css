@@ -1,0 +1,287 @@
+/* .menu-item-container {
+    display: flex;
+    width: 550px;
+    background-image: url('../../../assets/wood4test.jpg');
+    color: black;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.555) 0px 5px 12px;
+ 
+}
+
+.menu-item-img-div {
+    width: 80px;
+    height: 80px;
+}
+
+.menu-item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.menu-item-info-div {
+    width: 80%;
+    margin: 0 0 0 10px;
+}
+
+.menu-item-info-one {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Fraunces;
+}
+
+.menu-item-name {
+    font-family: Fraunces;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 24px;
+    margin: 0;
+    width: fit-content;
+    color: black;
+}
+
+.menu-item-price-div {
+    display: flex;
+}
+
+.menu-item-price-border {
+    height: 20px;
+    width: 8vw;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.menu-item-price {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.menu-item-info-two {
+    font-family: Afacad;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+@media (max-width: 1200px) {
+    .menu-item-container {
+        display: flex;
+        width: 100%;
+        justify-content:space-between
+    }
+
+    .menu-item-info-div {
+        width: 90%;
+    }
+
+    .menu-item-price-border {
+        height: 20px;
+        width: 30vw;
+        border-bottom: 1px solid rgb(211, 211, 211);
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .menu-item-info-div {
+        width: 70%;
+    }
+} */
+
+
+
+/* .menu-items-div-cont {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.menu-item-div-wrap {
+    
+ 
+    border-radius: 4px;
+}
+
+.menu-item-div {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.item-name {
+    font-family: Fraunces;
+    font-size: 24px;
+}
+
+.item-desc {
+    font-family: Afacad;
+    font-size: 20px;
+}
+
+.menu-item-right {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.item-price {
+    font-family: Fraunces;
+    font-size: 20px;
+    margin: 0 0 0 10px;
+}
+
+.item-line-deco {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+
+@media (max-width: 1100px) {
+    .menu-items-div-cont {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+} */
+
+.menu-item-div-wrap {
+    display: flex;
+    width: 100%;
+}
+
+.span-glavna {
+    grid-column: span 2;
+}
+
+
+.menu-item-div {
+    display: flex;
+    width: 100%;
+   
+    height: fit-content;
+    padding: 10px 0;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.menu-item-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-item-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item-right-wrap {
+    display: flex;
+    align-items: start;
+}
+
+.menu-item-more {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item-title {
+    font-family: Fraunces;
+    font-size: 24px;
+}
+
+.item-desc {
+    font-family: Afacad;
+    font-size: 20px;
+}
+
+.item-price-currency {
+    font-family: Afacad;
+    font-size: 20px;
+}
+
+.item-price {
+    font-family: Afacad;
+    font-size: 20px;
+    width: 46px;
+    display: flex;
+    justify-content: end;
+    margin: 0 3px;
+}
+
+.item-meat-type {
+    font-family: Afacad;
+    font-size: 20px;
+}
+
+/* .item-line {
+    width: 0vw;
+    height: 1px;
+    background-color: rgb(221, 221, 221);
+} */
+
+.menu-item-more {
+    margin: 0 0 0 12px;
+}
+
+@media (max-width: 1200px) {
+    .menu-item-div-wrap {
+        grid-column: span 2;
+    }
+
+    .menu-item-div {
+        height: fit-content;
+        padding: 10px 0;
+    }
+
+    .menu-item-title {
+        font-size: 22px;
+    }
+
+    .item-desc {
+        font-size: 18px;
+    }
+
+    .item-price{
+        font-size: 18px;
+    }
+
+    .item-price-currency {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 800px) {
+    .menu-item-div {
+        height: fit-content;
+        padding: 10px 0;
+    }
+
+    .menu-item-title {
+        font-size: 20px;
+    }
+
+    .item-desc {
+        font-size: 16px;
+    }
+
+    .item-price{
+        font-size: 16px;
+    }
+
+    .item-price-currency {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 800px) {
+    .meat-cont {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+}
