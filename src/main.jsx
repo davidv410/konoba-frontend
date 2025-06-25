@@ -14,6 +14,10 @@ const router = createBrowserRouter(
     { path: "admin-login", element: <Admin />},
     { path: "admin-confirm", element: <BookConfirm />}
   ]
+  ,
+  {
+    basename: "/konoba-frontend",  // kad pusham ovo sve obrisat
+  }
 )
 
 createRoot(document.getElementById('root')).render(
