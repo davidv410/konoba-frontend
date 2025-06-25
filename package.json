@@ -13,7 +13,10 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+<<<<<<< HEAD
     "jwt-decode": "^4.0.0",
+=======
+>>>>>>> 2a13552ab9cacdf6bf9500b9f7c1c46aae6ce6c6
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",

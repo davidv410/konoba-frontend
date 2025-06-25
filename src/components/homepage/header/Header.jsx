@@ -6,6 +6,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import logo from '../../../assets/logo.png';
 import { useNavigate, useLocation } from 'react-router-dom'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a13552ab9cacdf6bf9500b9f7c1c46aae6ce6c6
 const Header = ({ menuScrollToFunc, blogRef, menuRef, galerijaRef, bookATableRef, contactRef }) => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
