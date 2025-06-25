@@ -9,7 +9,7 @@ const getUser = () => {
 
         const getUser = useCallback(async () => {
             try{
-                const fetchData = await fetch("http://localhost:5000/login", {
+                const fetchData = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
                 credentials: 'include',
                 method: 'GET'
             })
