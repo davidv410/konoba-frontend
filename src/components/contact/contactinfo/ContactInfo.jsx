@@ -30,7 +30,7 @@ const ContactInfo = () => {
                     <a href="tel:+38763123321" style={{ color: "black" }}>
                     <div className='align-div'>
                         <PiPhoneBold className='icon phone'/>
-                        <div>+387 63 123 321</div>
+                        <div>+387 63 330 814</div>
                     </div>
                     </a>
                     <RiArrowRightLine className='contact-arrow'/>
