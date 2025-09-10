@@ -14,7 +14,7 @@ const ContactInfo = () => {
                     <a style={{ color: "black" }} target="_blank" href="https://www.google.com/maps/place/Konoba+Ivina+Arka/@43.8177427,16.9648568,555m/data=!3m1!1e3!4m6!3m5!1s0x475f8cb53e3e5653:0x80b9d06d571629da!8m2!3d43.8177159!4d16.964916!16s%2Fg%2F11g9nsdw6v?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D">
                     <div className='align-div-exepction'>
                         <LuMapPin className='location-icon icon'/>
-                        <div>Rapovine (magistralni put Livno-Split), Livno</div>
+                        <div>Veliki Guber 1, Livno</div>
                    </div>
                    </a>
                    <RiArrowRightLine className='contact-arrow'/>
@@ -22,7 +22,7 @@ const ContactInfo = () => {
                 <div className='contact-info-div align'>
                     <div className='align-div'>
                         <PiClockBold className='icon'/>
-                        <div>Pon-Ned: 09:00 - 00:00</div>
+                        <div>Pon-Ned: 09:00 - 22:00</div>
                     </div>
                     <RiArrowRightLine className='contact-arrow'/>
                 </div>

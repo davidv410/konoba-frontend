@@ -27,7 +27,7 @@ const Footer = ({ menuScrollToFunc, blogRef, menuRef, galerijaRef, bookATableRef
                         <li className='footer-title'>KONTAKT</li>
                         <li className='footer-li c-info'>
                             <a className="a-tag" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/Konoba+Ivina+Arka/@43.8177427,16.9648568,555m/data=!3m1!1e3!4m6!3m5!1s0x475f8cb53e3e5653:0x80b9d06d571629da!8m2!3d43.8177159!4d16.964916!16s%2Fg%2F11g9nsdw6v?entry=ttu">
-                                Rapovine (magistralni put Livno-Split), Livno
+                                Veliki Guber 1, Livno
                             </a>
                         </li>
                         <li className='footer-li c-info'>
@@ -53,7 +53,7 @@ const Footer = ({ menuScrollToFunc, blogRef, menuRef, galerijaRef, bookATableRef
                 </div>
                 
                 <div className='creator-wrap'>
-                    <p className='creator'>© {new Date().getFullYear()} Konoba Ivina Arka | David Vrgoč</p>
+                    <p className='creator'>© {new Date().getFullYear()} Konoba Ivina Arka </p>
                 </div>
 
 
