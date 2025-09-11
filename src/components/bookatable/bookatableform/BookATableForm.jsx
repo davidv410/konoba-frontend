@@ -85,6 +85,8 @@ const BookATableForm = () => {
             })
             if(sendData.ok){
                 const data = await sendData.json()
+                console.log(data)
+
                 setSuccessMsg('Upit za rezervaciju je poslan, potvrdu rezervacije ćete dobiti putem e-maila')
                 setFormData({
                     name: "",

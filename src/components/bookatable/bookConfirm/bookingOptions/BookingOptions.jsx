@@ -85,6 +85,24 @@ const BookingOptions = ({ backendRoute, data, refetch}) => {
         }
     }
 
+    const removePendingReservation = async (id) => {
+        try{
+            const sendData = await fetch(`${import.meta.env.VITE_API_URL}/book-table-confirm/${id}`, {
+                method: 'DELETE'
+            })
+            if(sendData.ok){
+                const data = await sendData.json()
+                console.log('RESPONSE:', data);
+                refetch()
+            }else{
+                const error = await sendData.json()
+                setErrors({ general: error.message || 'Server error' });
+            }
+        }catch{
+
+        }
+    }
+
 
     return(
         <>
@@ -98,8 +116,9 @@ const BookingOptions = ({ backendRoute, data, refetch}) => {
                     <div>Datum: {item.date}</div>
                     <div>Vrijeme: {item.time}</div>
                     <div>Broj ljudi: {item.people}</div>
-                    <button className="admin-accept-btn" onClick={() => reservationFunction(item.id, 'accept')}>ACCEPT</button>
-                    <button className="admin-deny-btn" onClick={() => reservationFunction(item.id, 'deny')}>DENY</button>
+                    <button className="admin-accept-btn" onClick={() => reservationFunction(item.id, 'accept')}>POTVRDI</button>
+                    <button className="admin-deny-btn" onClick={() => reservationFunction(item.id, 'deny')}>ODBIJ</button>
+                    <button onClick={() => removePendingReservation(item.id)}>OBRISI</button>
                 </div>
             ))
             : null }
@@ -115,7 +134,7 @@ const BookingOptions = ({ backendRoute, data, refetch}) => {
                         <div>Datum: {item.date}</div>
                         <div>Vrijeme: {item.time}</div>
                         <div>Broj ljudi: {item.people}</div>
-                        <button onClick={() => removeReservation(item.id)}>IZBRISI</button>
+                        <button onClick={() => removeReservation(item.id)}>OBRISI</button>
                     </div>
             ))
             : null }
