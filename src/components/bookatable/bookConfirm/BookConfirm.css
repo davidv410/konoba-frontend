@@ -20,7 +20,7 @@ body {
 .admin-nav-cont {
     height: 100%;
     width: fit-content;
-    background-color: rgb(26, 18, 13);
+    background-color: rgb(20, 20, 20);
     position: absolute;
     z-index: 999;
     transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);

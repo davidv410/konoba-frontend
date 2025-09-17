@@ -175,13 +175,15 @@ const BlogOptions = ({ backendRoute, data, refetch}) => {
             <div>
             { openAddBlog ? 
                <>
-                <div>
-                    <button onClick={() => closeAddBlogFunc()}>X</button>
-                    <div><input    name="naslov" type="text" placeholder='naslov' onChange={handleInput}/></div>
-                    <div><textarea name="opis" id="" placeholder='opis' onChange={handleInput}></textarea></div>
-                    <div><textarea name="sadrzaj" id="" placeholder='sadrzaj' onChange={handleInput}></textarea></div>
-                    <div><input    name="slika" type="file" placeholder='slika' onChange={handleInput}/></div>
-                    <button onClick={() => addBlog()}>DODAJ</button>
+                <div className='add-blog-div'>
+                    <button onClick={() => closeAddBlogFunc()} className='close-btn'>X</button>
+                    <div className='blog-options'>
+                    <div className='blog-option-div'><input className="blog-option-input" name="naslov" type="text" placeholder='naslov' onChange={handleInput}/></div>
+                    <div className='blog-option-div'><textarea className="blog-option-input textarea" name="opis" id="" placeholder='opis' onChange={handleInput}></textarea></div>
+                    <div className='blog-option-div'><textarea className="blog-option-input textarea" name="sadrzaj" id="" placeholder='sadrzaj' onChange={handleInput}></textarea></div>
+                    <div><input  className='slika-input'  name="slika" type="file" placeholder='slika' onChange={handleInput}/></div>
+                    </div>
+                    <button onClick={() => addBlog()} className="add-blog-btn">DODAJ</button>
                 </div>
                </>
             : 
@@ -192,13 +194,15 @@ const BlogOptions = ({ backendRoute, data, refetch}) => {
 
             <div>
                 {blogz && blogz.map(item => (
-                    <div>
-                        <button onClick={() => closeEditBlog()}>X</button>
-                        <div><textarea name="title" id="" value={item.title} onChange={handleBlogInput}></textarea></div>
-                        <div><textarea name="descr" id="" value={item.descr}  onChange={handleBlogInput}></textarea></div>
-                        <div><textarea name="content" id="" value={item.content}  onChange={handleBlogInput}></textarea></div>
-                        <div><input name="image" type="file" onChange={handleBlogInput}/></div>
-                        <button onClick={() => applyEditBlog()}>POTVRDI PROMJENE</button>
+                    <div className='add-blog-div'>
+                        <button onClick={() => closeEditBlog()} className='close-btn'>X</button>
+                        <div className='blog-options'>
+                            <div className='blog-option-div'><textarea className="blog-option-input textarea" name="title" id="" value={item.title} onChange={handleBlogInput}></textarea></div>
+                            <div className='blog-option-div'><textarea className="blog-option-input textarea" name="descr" id="" value={item.descr}  onChange={handleBlogInput}></textarea></div>
+                            <div className='blog-option-div'><textarea className="blog-option-input textarea-special"name="content" id="" value={item.content}  onChange={handleBlogInput}></textarea></div>
+                            <div className='slika-input'><input name="image" type="file" onChange={handleBlogInput}/></div>
+                        </div>
+                        <button onClick={() => applyEditBlog()} className="confirm-blog-btn">POTVRDI PROMJENE</button>
                     </div>
                 ))}
             </div>

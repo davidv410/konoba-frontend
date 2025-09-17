@@ -1,51 +1,61 @@
 .admin-accept-btn {
-    background-color: rgb(2, 231, 52);
+    background-color: rgb(48, 48, 48);
     color: white;
     font-family: Afacad;
-    border: 2px solid rgb(0, 211, 18);
-    border-radius: 4px;
-    padding: 2px 7px;
+    border: none;
+    border-radius: 25px;
+    padding: 4px 14px;
     cursor: pointer;
 }
 
 .admin-deny-btn {
-    background-color: rgb(224, 4, 4);
+    background-color: rgb(48, 48, 48);
     color: white;
     font-family: Afacad;
-    border: 2px solid rgb(141, 0, 0);
-    border-radius: 4px;
-    padding: 2px 7px;
+    border: none;
+    border-radius: 25px;
+    padding: 4px 14px;
     cursor: pointer;
-    font-weight: bold;
+    margin: 0 5px;
+}
+
+.admin-delete-btn {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    font-family: Afacad;
+    border: none;
+    border-radius: 25px;
+    padding: 4px 14px;
+    cursor: pointer;
     margin: 0 5px;
 }
 
 .pop-up-text {
     margin: 0 5px 0 0;
-}
-
-
-.potvrditi {
-    color: white;
-    background-color: rgb(2, 231, 52);
-    color: white;
     font-family: Afacad;
-    border: 2px solid rgb(0, 211, 18);
-    border-radius: 4px;
-    padding: 2px 7px;
 }
 
-.odbiti{
-    background-color: rgb(224, 4, 4);
-    color: white;
-    font-family: Afacad;
-    border: 2px solid rgb(141, 0, 0);
-    border-radius: 4px;
-    padding: 2px 7px;
-    cursor: pointer;
-    font-weight: bold;
-}
+
+/* .potvrditi {
+
+} */
+
+/* .odbiti{
+
+} */
 
 .popUpActive {
     display: flex;
+}
+
+.booking-application {
+    background-color: rgb(29, 29, 29);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.admin-buttons {
+    padding: 20px 0 0 0;
 }

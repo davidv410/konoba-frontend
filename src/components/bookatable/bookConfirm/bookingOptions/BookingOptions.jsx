@@ -113,12 +113,14 @@ const BookingOptions = ({ backendRoute, data, refetch}) => {
                     <div>Ime: {item.name}</div>
                     <div>Email: {item.email}</div>
                     <div>Broj: {item.phone}</div>
-                    <div>Datum: {item.date}</div>
-                    <div>Vrijeme: {item.time}</div>
+                    <div>Datum: {new Date(item.date).toLocaleDateString("de-DE")}</div>
+                    <div>Vrijeme: {item.time?.slice(0, 5)}</div>
                     <div>Broj ljudi: {item.people}</div>
-                    <button className="admin-accept-btn" onClick={() => reservationFunction(item.id, 'accept')}>POTVRDI</button>
-                    <button className="admin-deny-btn" onClick={() => reservationFunction(item.id, 'deny')}>ODBIJ</button>
-                    <button onClick={() => removePendingReservation(item.id)}>OBRISI</button>
+                    <div className='admin-buttons'>
+                        <button className="admin-accept-btn" onClick={() => reservationFunction(item.id, 'accept')}>POTVRDI</button>
+                        <button className="admin-deny-btn" onClick={() => reservationFunction(item.id, 'deny')}>ODBIJ</button>
+                        <button className="admin-delete-btn" onClick={() => removePendingReservation(item.id)}>OBRISI</button>
+                    </div>
                 </div>
             ))
             : null }
@@ -134,7 +136,9 @@ const BookingOptions = ({ backendRoute, data, refetch}) => {
                         <div>Datum: {item.date}</div>
                         <div>Vrijeme: {item.time}</div>
                         <div>Broj ljudi: {item.people}</div>
-                        <button onClick={() => removeReservation(item.id)}>OBRISI</button>
+                        <div className='admin-buttons'>
+                            <button onClick={() => removeReservation(item.id)}>OBRISI</button>
+                        </div>
                     </div>
             ))
             : null }
