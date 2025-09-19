@@ -20,7 +20,7 @@ const Blog = forwardRef((props, ref) => {
             ease: "power3.out",
             scrollTrigger: {
             trigger: ".blog-container",
-            start: "top 80%",   // when top of section hits 80% of viewport
+            start: "top 90%",   // when top of section hits 80% of viewport
             toggleActions: "play none none reverse" 
             }
         });
