@@ -1,3 +1,6 @@
+import gsap from 'gsap'
+import { ScrollTrigger, SplitText } from 'gsap/all'
+
 import { useRef, createContext, useState } from 'react'
 import Homepage from "./homepage/Homepage"
 import Blog from "./blog/Blog"
@@ -7,6 +10,8 @@ import BookATable from "./bookatable/BookATable"
 import Contact from "./contact/Contact"
 import Footer from "./footer/Footer"
 import './App.css'
+
+gsap.registerPlugin(ScrollTrigger, SplitText)
 
 function App() {
 

@@ -1,0 +1,45 @@
+.login-div{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(14, 14, 14);
+}
+
+.login-div-inside {
+    background-color: rgb(19, 19, 19);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.login-btn {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    font-family: Afacad;
+    border: none;
+    border-radius: 25px;
+    padding: 4px 14px;
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+.login-input {
+    width: 200px;
+    height: 30px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    padding: 0 0 0 10px;
+    font-family: Afacad;
+}
+
+.logout-btn {
+     background-color: rgb(48, 48, 48);
+    color: white;
+    font-family: Afacad;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 14px;
+    cursor: pointer;
+}

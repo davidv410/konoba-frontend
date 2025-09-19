@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import gsap from 'gsap'
 import './Header.css'
 import { PiInstagramLogoBold } from "react-icons/pi";
 import { TiSocialFacebookCircular } from "react-icons/ti";
@@ -9,6 +10,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 const Header = ({ menuScrollToFunc, blogRef, menuRef, galerijaRef, bookATableRef, contactRef }) => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const mobileMenuRef = useRef(null) // Add ref for the mobile menu
     const navigate = useNavigate()
     const location = useLocation()
 
@@ -24,6 +26,24 @@ const Header = ({ menuScrollToFunc, blogRef, menuRef, galerijaRef, bookATableRef
         }
         setIsMenuOpen(false)
     }
+
+    useEffect(() => {
+        if (isMenuOpen) {
+            gsap.fromTo(
+                mobileMenuRef.current,
+                { y: '-100%', opacity: 0, display: 'block' },
+                { y: '0%', opacity: 1, duration: 0.5, ease: 'power3.out' }
+            );
+        } else {
+            gsap.to(mobileMenuRef.current, {
+                y: '-100%',
+                opacity: 0,
+                duration: 0.3,
+                display: 'none',
+                ease: 'power3.in'
+            });
+        }
+    }, [isMenuOpen]);
 
     return(
         <>
@@ -59,8 +79,7 @@ const Header = ({ menuScrollToFunc, blogRef, menuRef, galerijaRef, bookATableRef
                     />
                 </div>
 
-                <div className={`mobile-menu ${isMenuOpen ? null : 'mobile-closed'}`}>
-                    
+                <div className={`mobile-menu ${isMenuOpen ? null : 'mobile-closed'}`} ref={mobileMenuRef}> 
                     <ul className='mobile-menu-ul'>
                             <li className='list-item'  onClick={() => checkURL(blogRef)}><a>BLOG</a></li>
                             <li className='list-item'  onClick={() => checkURL(menuRef)}><a>MENU</a></li>
@@ -68,14 +87,11 @@ const Header = ({ menuScrollToFunc, blogRef, menuRef, galerijaRef, bookATableRef
                             <li className='list-item'  onClick={() => checkURL(bookATableRef)}><a>REZERVACIJE</a></li>
                             <li className='list-item'  onClick={() => checkURL(contactRef)}><a>KONTAKT</a></li>
                     </ul>
-
                     <ul className='social-list-mobile'>
                         <li className='list-item'><a href="" target="_blank"><PiInstagramLogoBold  className='social-icons-insta'/></a></li>
                         <li className='list-item'><a href="" target="_blank"><TiSocialFacebookCircular className='social-icons-face'/></a></li>
                     </ul>
-
                 </div>
-
             </div>
         </header>
         </>

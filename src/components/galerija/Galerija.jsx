@@ -1,4 +1,8 @@
-import { useState } from 'react'
+import gsap from 'gsap';
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import { useState, useEffect } from 'react'
 import SectionDivide from '../sectiondivide/SectionDivide'
 import './Galerija.css'
 import { forwardRef } from 'react'
@@ -7,9 +11,35 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import useFetch from './../../hooks/useFetch'
 
-const Galerija = forwardRef((props, ref) => {
+gsap.registerPlugin(ScrollTrigger);
 
+
+const Galerija = forwardRef((props, ref) => {
+    
+    
     const { data, error, isLoading } = useFetch(`${import.meta.env.VITE_API_URL}/gallery-route`)
+    
+    // Run GSAP animation after data is loaded and rendered
+    useEffect(() => {
+        if (!data || !data.length) return;
+        const anim = gsap.fromTo(
+            ".gallery-section",
+            { opacity: 0, y: 100 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".gallery-section",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+        ScrollTrigger.refresh();
+    }, [data]);
+
 
     const [openImage, setOpenImage] = useState()
     const [currentIndex, setCurrentIndex] = useState()
@@ -53,7 +83,7 @@ const Galerija = forwardRef((props, ref) => {
                     ))
                 }
                 </div>
-
+            </section>
                 { openImage ?
                     <div className='open-image-div-wrap'>
                         <div className="open-image-div">
@@ -65,9 +95,6 @@ const Galerija = forwardRef((props, ref) => {
                     </div>
                 : null
                 }
-
-            
-            </section>
         </>
     )
 })

@@ -33,7 +33,7 @@ const BookConfirm = () => {
         <section className="admin-section">
 
             <button className="admin-nav-toggle" onClick={() => setNavOpen(open => !open)}>
-                {navOpen ? "Zatvori" : "Otvori"}
+                {navOpen ? "zatvori" : "menu"}
             </button>
 
             <div className={`admin-nav-cont${navOpen ? " open" : ""}`}>
@@ -58,7 +58,7 @@ const BookConfirm = () => {
 
         </section>
         : 
-        <div><button onClick={() => navigate('/admin-login')}>LOGIN</button></div>
+        <div className='login-btn-wrap'><button className="login-btn" onClick={() => navigate('/admin-login')}>LOGIN</button></div>
          }
         </>
     )

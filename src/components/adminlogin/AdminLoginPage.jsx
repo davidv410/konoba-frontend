@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate } from "react-router-dom";
 import { useUser } from '../../contexts/UserContext'
+import './Admin.css'
 
 const AdminLogin = () => {
 
@@ -50,10 +51,13 @@ const AdminLogin = () => {
 
     return (
         <>
-            <input type="text" name="username" id="" onChange={handleInput} placeholder='username'/><br></br>
-            <input type="text" name="password" onChange={handleInput} placeholder='password'/><br></br>
-            <button onClick={() => loginFunc()}>LOGIN</button>
-
+        <div className='login-div'>
+            <div className='login-div-inside'>
+                <input className="login-input" type="text" name="username" id="" onChange={handleInput} placeholder='korisnik'/><br></br>
+                <input className="login-input" type="text" name="password" onChange={handleInput} placeholder='šifra'/><br></br>
+                <button className="login-btn" onClick={() => loginFunc()}>PRIJAVA</button>
+            </div>
+        </div>
         </>
     )
 }

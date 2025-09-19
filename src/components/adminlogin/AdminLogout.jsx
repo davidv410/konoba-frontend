@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useUser } from '../../contexts/UserContext'
 import { useNavigate } from 'react-router-dom'
+import './Admin.css'
 
 const AdminLogout = () => {
 
@@ -25,7 +26,7 @@ const AdminLogout = () => {
         };
     return(
         <>
-         <button onClick={logout}>Logout</button>
+         <button className="logout-btn" onClick={logout}>Logout</button>
         </>
     )
 }

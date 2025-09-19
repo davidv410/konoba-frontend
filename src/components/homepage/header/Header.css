@@ -100,14 +100,14 @@ nav {
 }
 
 .mobile-menu {
-    display: none;
-    
+    display: none !important;
 }
 
 a {
     text-decoration: none;
     color: white;
 }
+
 
 @media (max-width: 1000px ) {
     .navigation-container {
@@ -137,7 +137,7 @@ a {
         left: 0;
         z-index: -1;
         border-radius: 4px;
-        display: flex;
+       display: flex !important;
         justify-content: center;
         flex-direction: column;
     }

@@ -1,15 +1,38 @@
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { useState } from 'react'
 import './Menu.css'
 import MenuSelector from './menu-selector/MenuSelector'
 import SectionDivide from '../sectiondivide/SectionDivide'
 import { forwardRef } from 'react'
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Menu = forwardRef((props, ref) => {
+
+    useGSAP(() => {
+        gsap.from(".menu-container", {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+            trigger: ".menu-container",
+            start: "top 70%",    // when top of section hits 80% of viewport
+            toggleActions: "play none none reverse" 
+            }
+        });
+
+    }, [])
+
     const [showAll, setShowAll] = useState(false)
 
     const toggleMenu = () => {
         setShowAll(!showAll)
     }
+
 
     return(
         <>

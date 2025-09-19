@@ -6,7 +6,12 @@
     justify-content: center;
     align-items: center;
     padding: 6vw 0;
+
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.2s, transform 0.2s;
 }
+
 
 .gallery {
     width: calc(100% - 4vw);
@@ -23,8 +28,8 @@
 }
 
 .open-image-div-wrap {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.938);
     position: fixed;
     top: 50%;
